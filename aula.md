@@ -60,3 +60,12 @@ while
 
 # Condicionais
 switch
+
+## Módulos me Node.js:
+
+importação de módulos (require, CommonJS)
+Biblioteca 'inquirer' para criar prompts interativos
+
+## Progra,ação assíncrona e Promises:
+
+- Uso de funções assíncronas (async/await)  // o await "espera" uma função que é uma promeça (promeça no sentido que o código está prometendo voltar com alguma resposta)
