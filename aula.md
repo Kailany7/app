@@ -38,3 +38,19 @@ Function
 ## Operadores
 
 Operadores de atribuição de valor
+Operadores de concatenação
+
+## Estrutura de dados :
+
+### Arrays :
+- Uma lista que contém qualquer tipo de dado
+
+### Objetos:
+Atributos e métodos
+Criação  e manipulação de objetos
+Acesso a propriedades de objetos
+
+### Function
+criar ( function minhaFuncao () )
+excutar
+arrow function ( const minhaFuncao = () => {} )
