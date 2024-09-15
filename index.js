@@ -22,22 +22,21 @@ const cadastraMetas = async () => {
 const listarMetas = async () => {
     const respostas = await checkbox({
         message: "Use as Setas para mudar de meta, o Espaço para marcar ou desmarcar e o Enter para finalizar essa etapa.",
-       //choices é uma escola e colocamos uma array : []
-        choices: [...metas], // colocamos as metas dentro da lista que podemos imaginar como uma caixa e os ... fez uma copia d emeta e espalhou na "caixa"
-        instructions: false, // limpa a instrução em ingles que aparece
+        choices: [...metas],
+        instructions: false, 
     })
 
     if(respostas.length == 0){
         console.log("Nenhuma meta selecionada!")
         return
     }
-    // mecanismo para desmarcar as metas
+    
     metas.forEach((m) => {
         m.checked = false
     })
 
-    respostas.forEach((resposta) => {  //forEach (para cada) ver o que o usuario digitou e compara com as metas
-         const meta = metas.find((m)=> {  //find ver as metas já feitas para comparar com a meta digitada
+    respostas.forEach((resposta) => {  
+         const meta = metas.find((m)=> {
              return m.value == resposta
          }) 
          meta.checked = true
@@ -46,7 +45,21 @@ const listarMetas = async () => {
     console.log('Meta(s) marcadas como concluída(s)')
 }
 
+const metasRealizadas = async () => {
+    const realizadas = metas.filter((meta) => {
+        return meta.checked
+    })
 
+    if(realizadas.length == 0){
+        console.log('Não existem metas realizadas! :(')
+        return
+    }  
+    
+    await select({
+        message: "Metas Realiazaas",
+        choices: [...realizadas],
+    })
+}
 
 const start = async () => { 
     
@@ -62,6 +75,11 @@ const start = async () => {
                 {
                     name: "Listar metas",
                     value: "listar"
+
+                },
+                {
+                    name: "Metas realizadas",
+                    value: "realizadas"
 
                 },
                 {
@@ -81,6 +99,9 @@ const start = async () => {
                 break
             case "listar":
                 await listarMetas() 
+                break
+            case "realizadas":
+                await metasRealizadas()
                 break
             case "sair":
                 console.log("Até a próxima")

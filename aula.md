@@ -40,11 +40,17 @@ Function
 Operadores de atribuição de valor: =
 Operadores de concatenação: +
 Operadores de comparação: == !=  < >  <= >=
+Spread operator: ...
 
 ## Estrutura de dados :
 
 ### Arrays :
 - Uma lista que contém qualquer tipo de dado
+- Métodos de array: [push, find, forEach, filter] = HOF (Higher Order Functions)
+
+
+obs: Métodos é toda função que ta dentro de um objeto
+obs: o JavaScript acaba transformando dados em objeto
 
 ### Objetos:
 Atributos e métodos
