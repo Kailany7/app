@@ -1,9 +1,33 @@
-const { select } = require('@inquirer/prompts') // para extrair algum módulo pronto
+const { select, input } = require('@inquirer/prompts') // para extrair algum módulo pronto
 
-const start = async () => {  //start é uma função
+let meta = {
+    value: 'Toamr 3l de água por dia',
+    checked: false
+}
+
+let metas = [ meta ]  // lista de metas
+
+const cadastraMetas = async () => {
+    const meta = await input({ message: "Digite a meta:" }) 
+    
+    if(meta.length == 0){ // length é para ver quantos caracteres foram escritos, nesse caso para o if funcionar tem que ser Zero caracteres
+        console.log('A meta não pode ser vazia')
+        return
+    }
+
+    metas.push( // serve para colocar mais metas
+        { value: meta, checked: false}
+    )
+} 
+
+
+
+
+
+const start = async () => { 
     
     while(true){
-        // await é como se fosse uma espera informando que o usuario vai selecionar alguma coisa. O AWAIT precisa de ASYNC para funcionar
+        
         const opcao = await select ({
             message: "Menu >",
             choices: [   // choices = escolhas
@@ -28,7 +52,8 @@ const start = async () => {  //start é uma função
 
         switch(opcao) {
             case "cadrastrar":
-                console.log("vamos cadastrar")
+                await cadastraMetas() 
+                console.log(metas)
                 break
             case "listar":
                 console.log("vamos listar")

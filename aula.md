@@ -37,8 +37,9 @@ Function
 
 ## Operadores
 
-Operadores de atribuição de valor
-Operadores de concatenação
+Operadores de atribuição de valor: =
+Operadores de concatenação: +
+Operadores de comparação: == !=  < >  <= >=
 
 ## Estrutura de dados :
 
@@ -59,7 +60,8 @@ arrow function ( const minhaFuncao = () => {} )
 while
 
 # Condicionais
-switch
+- switch
+- if/else
 
 ## Módulos me Node.js:
 
