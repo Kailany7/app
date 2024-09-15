@@ -57,3 +57,6 @@ arrow function ( const minhaFuncao = () => {} )
 
 # Estrutura de repetição
 while
+
+# Condicionais
+switch
