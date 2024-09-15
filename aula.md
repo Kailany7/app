@@ -54,3 +54,6 @@ Acesso a propriedades de objetos
 criar ( function minhaFuncao () )
 excutar
 arrow function ( const minhaFuncao = () => {} )
+
+# Estrutura de repetição
+while

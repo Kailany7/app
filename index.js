@@ -1,8 +1,12 @@
-// Criação da função
-
-function start() {
-    console.log('começou')
+// função
+const start = () => {
+    let count = 0
+    //while é uma estrutua de repetição
+    while(count < 10){   
+        console.log(count)
+        count = count + 1
+    }
 }
 
-// execução da função
+
 start()
