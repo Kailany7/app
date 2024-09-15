@@ -1,14 +1,8 @@
-let meta = {
-    value: ' ler um livro por mês',
-    checked: true,
+// Criação da função
+
+function start() {
+    console.log('começou')
 }
 
-let metas = [
-    meta,
-    {
-        value: "caminhar 20 minutos todos os dias",
-        checked: false
-    }
-]
-
-console.log(metas[1].value)
+// execução da função
+start()
