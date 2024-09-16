@@ -71,8 +71,17 @@ while
 
 ## Módulos me Node.js:
 
-importação de módulos (require, CommonJS)
-Biblioteca 'inquirer' para criar prompts interativos
+- importação de módulos (require, CommonJS)
+- Biblioteca 'inquirer' para criar prompts interativos
+- FS (file system)
+
+## JSON
+ - JSON (Javascript Object Notation) é um formato de dados que é usado para armazenar e transmitir dados entre sistemas. Ex: já deixar metas salvas
+ - JSON.parse() : transforma de JSON para JS
+ - JSON.stringify() : Transforma de JS para JSON
+
+
+
 
 ## Progra,ação assíncrona e Promises:
 
